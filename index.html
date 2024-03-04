@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
- 
+
   <style>
  a {
       font-size:14px;
@@ -25,14 +25,30 @@
         text-align:center
       }
     }
-    .hidden {
-  visibility: hidden;
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
 
 header {
     background:transparent;
 }
 
+.fade-element {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .fade-in {
+        opacity: 1;
+    }
 
   </style>
   <title> Main Page</title>
@@ -80,8 +96,7 @@ header {
         <div class="ms-auto d-none d-lg-block">
           <div id="hiddenDiv" class="hidden">
             <div class="input-group te" >
-              
-              <input type="text" class="form-control border-success w-auto  " placeholder="What service are you looking for today?">
+              <input type="text" class="form-control border-success w-auto " style="padding: 4px 150px;" placeholder="What service are you looking for today?">
               <span class="border-success  input-group-text bg-success text-white"><i class="fa fa-search"></i></span>
             
             </div>
@@ -101,9 +116,6 @@ header {
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">Products</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link mx-2 text-uppercase" href="#">Catalog</a>
           </li>
@@ -154,6 +166,135 @@ header {
     </p>
   </div>
   
+  <!-- popular services  -->
+  <div class="container">
+    <div class="col">
+
+    </div>
+  </div>
+
+  <!-- best part  -->
+   
+  <div class="container-fluid py-5" style="background-color: #a7d9bb;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="d-flex flex-column fade-element">
+                    <div class="d-flex align-items-center mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle me-2" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                        </svg>
+                        <h4 class="fs-4">Stick to your budget</h4>
+                    </div>
+                    <p>Find the right service for every price point. No hourly rates, just project-based pricing.</p>
+
+            
+            <div class="d-flex align-items-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle me-2" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+              </svg>
+              <h4 class="fs-4">Get quality work done quickly</h4>
+            </div>
+            <p>Hand your project over to a talented freelancer in minutes, get long-lasting results.</p>
+            
+            <div class="d-flex align-items-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle me-2" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+              </svg>
+              <h4 class="fs-4">Count on 24/7 support</h4>
+            </div>
+            <p>Our round-the-clock support team is available to help anytime, anywhere.</p>
+            
+            <div class="d-flex align-items-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle me-2" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+              </svg>
+              <h4 class="fs-4">Pay when you're happy</h4>
+            </div>
+            <p>Upfront quotes mean no surprises. Payments only get released when you approve.</p>
+          </div>
+        </div>
+        <div class="col-lg-6"></div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- you need  -->
+
+  <div class="container-fluid py-5 " style="background-color: white;">
+    <div class="container text-center">
+      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <div class="col">
+          <div class="p-3"><i class="bi bi-currency-dollar" style="font-size: 2em;"></i>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-3"><i class="bi bi-graph-up" style="font-size: 2em;"></i></div>
+        </div>
+        <div class="col">
+          <div class="p-3"><i class="bi bi-credit-card" style="font-size: 2em;"></i></div>
+        </div>
+        <div class="col">
+          <div class="p-3"><i class="bi bi-receipt-cutoff" style="font-size: 2em;"></i></div>
+        </div>
+        <div class="col">
+          <div class="p-3"><i class="bi bi-calculator" style="font-size: 2em;"></i></div>
+        </div>
+        <div class="col">
+          <div class="p-3"><i class="bi bi-bank" style="font-size: 2em;"></i></div>
+        </div>
+        <div class="col">
+          <div class="p-3"><i class="bi bi-wallet2" style="font-size: 2em;"></i></div>
+        </div>
+        <div class="col">
+          <div class="p-3"><i class="bi bi-cart3" style="font-size: 2em;"></i></div>
+        </div>
+        <div class="col">
+          <div class="p-3"><i class="bi bi-currency-bitcoin" style="font-size: 2em;"></i></div>
+        </div>
+        <div class="col">
+          <div class="p-3"><i class="bi bi-check-all" style="font-size: 2em;"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- blue section  -->
+  <section>
+    <div class="container-fluid rounded-3" style="background-color: #0d084d;">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6" style="color: white;">
+            <h1 style="font-weight: bolder;">Something Something</h1>
+            <h4>Advanced solutions and professional talent for businesses</h4>
+            <div class="d-flex align-items-baseline mb-3">
+              <i class="bi bi-patch-check-fill" style="font-size: 1.5em;"></i>
+              <h5 class="px-2">Stick to your budget </h5>
+            </div>
+          <p>Find the right service for every price point. No hourly rates, just project-based pricing.</p>
+          </div>
+            <div class="d-flex align-items-baseline mb-3">
+              <i class="bi bi-patch-check-fill" style="font-size: 1.5em;"></i>
+              <h5 class="px-2"> Fiverr Certified </h5>
+            </div>
+          <p>Build your own branded marketplace of certified experts</p>
+          </div>
+            <div class="d-flex align-items-baseline mb-3">
+              <i class="bi bi-patch-check-fill" style="font-size: 1.5em;"></i>
+              <h5 class="px-2">Fiverr Enterprise</h5>
+            </div>
+          <p>Manage your freelance workforce and onboard additional talent with an end-to-end SaaS solution</p>
+          </div>
+          <div class="col-lg-6"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 <script>
 
@@ -175,7 +316,32 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
 </script>
+
+<script>
+  window.addEventListener('scroll', function() {
+      const fadeElements = document.querySelectorAll('.fade-element');
+
+      fadeElements.forEach(function(element) {
+          if (isElementInViewport(element)) {
+              element.classList.add('fade-in');
+          }
+      });
+  });
+
+  function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+
+      return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+  }
+</script>
+
 </body>
 
 </html>
