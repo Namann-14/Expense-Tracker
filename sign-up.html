@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+ a {
+      font-size:14px;
+      font-weight:700
+    }
+    .superNav {
+      font-size:13px;
+    }
+    .form-control {
+      outline:none !important;
+      box-shadow: none !important;
+    }
+    @media screen and (max-width:540px){
+      .centerOnMobile {
+        text-align:center
+      }
+    }
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+header {
+    background:transparent;
+}
+
+.fade-element {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .fade-in {
+        opacity: 1;
+    }
+
+a{
+  text-decoration: none;
+}
+  </style>
+  <script>
+
+    function validateForm(){
+      var username = document.getElementById("name");
+      var email = document.getElementById("email");
+      var phone = document.getElementById("phone");
+      var password = document.getElementById("pass");
+    
+
+      if (username.value.trim()=="")
+      {
+        document.getElementById("name").style.border = "solid 2px red";
+        document.getElementById("nameError").style.visibility="visible";
+        return false
+      }
+
+      else if (email.value.trim()=="")
+      {
+        document.getElementById("email").style.border = "solid 2px red";
+        document.getElementById("emailError").style.visibility="visible";
+        return false
+      }
+
+      else if (phone.value.trim()=="")
+      {
+        document.getElementById("phone").style.border = "solid 2px red";
+        document.getElementById("phoneError").style.visibility="visible";
+        document.getElementById("phoneError").innerHTML= "*Phone Number cannot be blank"
+        return false
+      }
+
+      else if (phone.value.trim().length !=10)
+      {
+        document.getElementById("phone").style.border = "solid 2px red";
+        document.getElementById("phoneError").innerHTML= "*Phone number should be 10 digits"
+        return false
+      }
+
+      else if (password.value.trim()=="")
+      {
+        document.getElementById("pass").style.border = "solid 2px red";
+        document.getElementById("passError").style.visibility="visible";
+        return false
+      }
+
+      else if (password.value.trim().length<8)
+      {
+        document.getElementById("pass").style.border = "solid 2px red";
+        document.getElementById("passError").style.display="none";
+        document.getElementById("passError1").style.visibility="visible";
+        return false  
+      }
+      
+      else{
+        true
+      }
+    }
+
+
+  </script>
+  <title> Main Page</title>
+</head>
+
+
+  <!-- super nav  -->
+  <!-- <div class="superNav border-bottom py-2 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
+          <select  class="me-3 border-0 bg-light">
+            <option value="en-us">EN-US</option>
+          </select>
+          <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3"><strong>info@somedomain.com</strong></span>
+          <span class="me-3"><i class="fa-solid fa-phone me-1 text-success "></i> <strong>1-800-123-1234</strong></span>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
+          <span class="me-3"><i class="fa-solid fa-truck text-muted me-1"></i><a class="text-muted" href="#">Shipping</a></span>
+          <span class="me-3"><i class="fa-solid fa-file  text-muted me-2"></i><a class="text-muted" href="#">Policy</a></span>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<header>
+  <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fa-solid  fa-shop me-2"></i> <strong class=" fs-2">Spend Wise</strong></a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
+        <div class="input-group">
+          <span class="border-success  input-group-text bg-success  text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input type="text" class="form-control border-success " style="color:#7a7a7a">
+          <button class="btn btn-success  text-white">Search</button>
+        </div>
+      </div>
+
+      <!-- Hiddden Div -->
+
+      <div class=" collapse navbar-collapse ">
+        <div class="ms-auto d-none d-lg-block">
+          <div id="hiddenDiv" class="hidden">
+            <div class="input-group te" >
+              <input type="text" class="form-control border-success w-auto " style="padding: 4px 150px;" placeholder="What service are you looking for today?">
+              <span class="border-success  input-group-text bg-success text-white"><i class="fa fa-search"></i></span>
+            
+            </div>
+          </div>  
+        </div>
+
+      <!-- -- -->
+
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <strong class="fs-5">Offer</strong>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">About</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Account</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+</header>
+
+
+  <main> 
+    <div class="container shadow my-5 p-5 rounded" style="background-color: white">
+        <div class="row text-center">
+           
+            <h1 style="font-size: 50px; font-weight: bolder;">
+                Start your journey with us
+            </h1>
+        </div>
+        <div class="row py-5">
+            <div class="col-lg-6" >
+                <img src="images/sign-up-img.jpg" alt="sign up" class="img-fluid " >
+            </div>
+
+
+            <div class="col-lg-6">
+                <h2 style="font-size: 30px; font-weight: bolder;"> 
+                    Create New Account
+                </h2>
+            <form class="py-4" action="sign.in.html" name="myForm" onsubmit="return validateForm()" >
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Name</label> 
+                  <span id="nameError" style="color: red; visibility:hidden;">*Name cannot be blank</span>
+                  <input type="text" class="form-control" id="name" aria-describedby="">
+                  <div id="fname" class="form-text">Enter your full name</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <span id="emailError" style="color: red; visibility:hidden;">*Email cannot be blank</span>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                  <div id="" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="Phone Number" class="form-label">Phone Number</label>
+                  <span id="phoneError" style="color: red; visibility:hidden;">*Phone Number cannot be blank</span>
+                  <input type="tel" class="form-control" id="phone">
+                  <div id="" class="form-text">Enter your phone number</div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="pass" placeholder="Password">
+                        <span id="passError" style="color: red; visibility:hidden;">*Password cannot be blank</span>
+                        <span id="passError1" style="color: red; visibility:hidden;">*Password length should be minimum 8 characters.</span>
+                        <div id="password" class="form-text">Enter a strong password</div>
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1"> Confirm Password</label>
+                        <input type="password" class="form-control" id="pass" placeholder="Password">
+
+                        <div id="" class="form-text">Confirm your password</div>
+                      </div>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">I agree to the use or processing of my personal information by UrMatch for the purpose of fulfilling this request and in accordance with UrMatch’s Privacy Statement</label>
+                </div>
+                <div class="row">
+                <button type="submit" class="btn btn-primary btn-lg my-4">Submit</button>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-6">
+                        <div class="row">
+                        <button type="button" class="btn btn-outline-danger btn-flat" style="background-color: lightcoral;"><a href="#" class="fa fa-google text-decoration-none" ></a></button>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row m-0">
+                        <button type="button" class="btn btn-outline-info " style="background-color: lightblue;"><a href="#" class="fa fa-facebook text-decoration-none"></a></button>
+                    </div>
+                    </div>
+                </div>
+              </form>
+            </div>
+        </div>
+        </div>
+    </div>
+  </main>
+
+
+  <footer class=" container text-lg-start  text-muted ">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-facebook fs"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+    </section>
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Spend Wise
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="bi bi-house"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="bi bi-envelope"></i>
+              info@example.com
+            </p>
+            <p><i class="bi bi-telephone"></i> + 01 234 567 88</p>
+            <p><i class="bi bi-printer"></i>   + 01 234 567 89</p>
+          </div>
+  
+        </div>
+  
+      </div>
+    </section>
+  
+  
+  
+    <div class="text-center p-4" >
+      © 2024 Copyright:
+      <a class="text-reset" href="#">Spend Wise</a>
+    </div>
+  
+  </footer>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
