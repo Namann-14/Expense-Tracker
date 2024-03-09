@@ -1,0 +1,53 @@
+body {
+padding-top: 70px; 
+}
+
+a{
+font-size:14px;
+font-weight:700
+}
+
+.hidden {
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+opacity: 1;
+transition: opacity 0.5s ease-in-out;
+}
+
+.fade-element {
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+opacity: 1;
+}
+
+a{
+text-decoration: none;
+}
+
+/* .card:hover {
+transform: scale(1.1);
+}
+
+.card {
+transition: transform 0.5s;
+} */
+
+.card {
+    background: linear-gradient(to left, white 50%, #14A44D 50%);
+    background-size: 200%;
+    background-position: right;  
+  }
+  .card:hover {
+    background-position: left;
+    color: white;
+  }
+  .card {
+    transition: background-position 0.5s ease-in-out;
+  }
+

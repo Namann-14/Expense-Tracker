@@ -2,140 +2,108 @@
 <html lang="en">
 
 <head>
+  <!-- styling  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- font  -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  
+  <!-- bootstrap  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- icons  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Spend Wise</title>
+  
+  <link rel="icon" type="image/x-icon" href="Images/rounded-1.png" >
 
-  <style>
-            body {
-      padding-top: 70px; 
-    }
- a {
-      font-size:14px;
-      font-weight:700
-    }
-    .superNav {
-      font-size:13px;
-    }
-    .form-control {
-      outline:none !important;
-      box-shadow: none !important;
-    }
-    @media screen and (max-width:540px){
-      .centerOnMobile {
-        text-align:center
-      }
-    }
-
-.hidden {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+<style>
+*{
+  margin: 0px;
+  padding: 0px;
 }
 
-.visible {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+body{
+  padding-top: 100px;
 }
 
-
-header {
-    background:transparent;
+a{
+  text-decoration: none !important;
 }
 
-.fade-element {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
+.progress-container {
+  width: 100%;
+  background-color: #f1f1f1;
+}
 
-    .fade-in {
-        opacity: 1;
-    }
+.progress-bar {
+  height: 3px;
+  background-color: #4caf50;
+  width: 0%;
+}
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+}
 a{
   text-decoration: none;
 }
-  </style>
-  <title> Main Page</title>
-</head>
 
+</style>
+</head>
 <body>
-  <!-- super nav  -->
-  <!-- <div class="superNav border-bottom py-2 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
-          <select  class="me-3 border-0 bg-light">
-            <option value="en-us">EN-US</option>
-          </select>
-          <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3"><strong>info@somedomain.com</strong></span>
-          <span class="me-3"><i class="fa-solid fa-phone me-1 text-success "></i> <strong>1-800-123-1234</strong></span>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
-          <span class="me-3"><i class="fa-solid fa-truck text-muted me-1"></i><a class="text-muted" href="#">Shipping</a></span>
-          <span class="me-3"><i class="fa-solid fa-file  text-muted me-2"></i><a class="text-muted" href="#">Policy</a></span>
-        </div>
-      </div>
-    </div>
-  </div> -->
+
 <header>
+<!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#"><i class="fa-solid  fa-shop me-2"></i> <img src="Images/logo.png" alt="" style="height: 60px;"></a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="Images/logo.png" alt="logo" style="height: 60px;">
+      </a>
   
-      <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
-        <div class="input-group">
-          <span class="border-success  input-group-text bg-success  text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
-          <input type="text" class="form-control border-success " style="color:#7a7a7a">
-          <button class="btn btn-success  text-white">Search</button>
-        </div>
-      </div>
-
       <!-- Hiddden Div -->
-
-      <div class=" collapse navbar-collapse ">
+      <div class=" collapse navbar-collapse">
         <div class="ms-auto d-none d-lg-block">
           <div id="hiddenDiv" class="hidden">
-            <div class="input-group te" >
-              <input type="text" class="form-control border-success w-auto " style="padding: 6px 150px;" placeholder="What service are you looking for today?">
+            <div class="input-group te">
+
+              <input type="text" class="form-control border-success w-auto " style="padding: 4px 150px;" placeholder="What service are you looking for today?">
               <span class="border-success  input-group-text bg-success text-white"><i class="fa fa-search"></i></span>
             
             </div>
           </div>  
         </div>
-
-      <!-- -- -->
-
-        <ul class="navbar-nav ms-auto ">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <strong class="fs-5">Offer</strong>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+  
+      <!-- Toggler/collapsing button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <!-- Navigation links -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#"></a>
+            <a class="nav-link mx-2 text-uppercase" href="#">Transactions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">Services</a>
+            <a class="nav-link mx-2 text-uppercase" href="#">Goals</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">About</a>
+            <a class="nav-link mx-2 text-uppercase" href="#">Profile</a>
           </li>
         </ul>
-        <ul class="navbar-nav ms-auto ">
-          <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
-          </li>
+  
+        <!-- Additional actions -->
+        <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               ACCOUNT
@@ -149,161 +117,203 @@ a{
       </div>
     </div>
   </nav>
+  
+<!-- progress bar  -->
+</div>
+<div class="header fixed-top">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
 </div>
 </header>
+
+
 <main>
 
-  <!-- caroules  -->
-
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="Images/leaves.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="Images/beach.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="Images/castle.jpg" class="d-block w-100" alt="...">
-      </div>
-    </div>
-  </div>
-
-  <!-- trusted by  -->
-  <div class="container-fluid text-center py-5" style="background-color:#FAF9F6;">
-    <p>
-      Trusted by: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-      </svg>
-    </p>
-  </div>
-  
-  <!-- popular services  -->
-<section>
   <div class="container py-5">
-    <div class="row py-5">
-      <div class="col-lg-3">
-        <div class="card" style="width: 18rem;">
-          <img src="Images/WhatsApp Image 2024-03-05 at 3.35.15 PM (1).jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card" style="width: 18rem;">
-          <img src="Images/WhatsApp Image 2024-03-05 at 3.35.15 PM (1).jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card" style="width: 18rem;">
-          <img src="Images/WhatsApp Image 2024-03-05 at 3.35.15 PM (1).jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card" style="width: 18rem;">
-          <img src="Images/WhatsApp Image 2024-03-05 at 3.35.15 PM (1).jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  <!-- best part  -->
-  
-  <div class="container-fluid py-5 rounded-3" style="background-color: #a7d9bb;">
-    <div class="container">
+    <div class="row d-flex justify-content-center align-items-center py-5">
+      <div class="col">
+        <h1 class="fw-bolder">Make your Finance management better. Instantly</h1>
+        <p><i>Transform your financial journey with ease and efficiency, starting now.</i></p>
         <div class="row">
-            <div class="col-lg-6">
-                <div class="d-flex flex-column fade-element">
-                    <div class="d-flex align-items-center mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle me-2" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-                        </svg>
-                        <h4 class="fs-4">Stick to your budget</h4>
-                    </div>
-                    <p>Find the right service for every price point. No hourly rates, just project-based pricing.</p>
-
-            
-            <div class="d-flex align-items-center mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle me-2" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-              </svg>
-              <h4 class="fs-4">Get quality work done quickly</h4>
-            </div>
-            <p>Hand your project over to a talented freelancer in minutes, get long-lasting results.</p>
-            
-            <div class="d-flex align-items-center mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle me-2" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-              </svg>
-              <h4 class="fs-4">Count on 24/7 support</h4>
-            </div>
-            <p>Our round-the-clock support team is available to help anytime, anywhere.</p>
-            
-            <div class="d-flex align-items-center mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle me-2" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-              </svg>
-              <h4 class="fs-4">Pay when you're happy</h4>
-            </div>
-            <p>Upfront quotes mean no surprises. Payments only get released when you approve.</p>
-          </div>
+          <button type="button" class="btn btn-success btn-lg btn-block">Join Now</button>
         </div>
-        <div class="col-lg-6"></div>
+      </div>
+      <div class="col">
+        <img src="Images/new1.jpg" alt="" style="height: 300px;">
       </div>
     </div>
   </div>
   
 
-  <!-- you need  -->
+  <!-- About us   -->
+  <div class="container-fluid rounded-3 py-5 " style="background-color:#FAF9F6;">
+    <div class="container">
+    <div class="row py-5" >
+      <div class="col">
+        <img src="Images/about us" alt="" style="height: 400px;" class="rounded-3">
+      </div>
+      <div class="col">
+        <h4 class="text-success fw-bolder">About Us</h4>
+        <h2>Discover the world of Financial Planner</h2>
+        <p>Embark on a journey through the realm of Financial Planning, where strategic insights and tailored solutions pave the way to financial stability and prosperity. Explore diverse strategies, smart investments, and expert guidance to navigate the complexities of wealth management and achieve your financial goals.</p>
+        <button type="button" class="btn btn-success btn-lg" >
+          <a href="about-us.html" class="text-white" target="_blank" style="font-size: 18px;">Read more</a>
+      </button>
+      
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  <!-- our servies  -->
+  <section>
+  <div class="container py-5 ">
+    <div class="row py-5 d-flex align-items-stretch  ">
+      <div class="col d-flex align-items-stretch justify-content-center flex-column ">
+        <h5 class="text-success fw-bolder ">Our Services</h5>
+        <h2>What we offer</h2>
+        <p>"Experience comprehensive financial solutions tailored to your needs. Our offerings include personalized financial planning, investment management, retirement planning, and risk assessment. Let us guide you towards financial security and success, every step of the way."</p>
+        <button type="button" class="btn btn-success  btn-lg ">Read more</button>
+      </div>
+      <div class="col text-center d-flex align-items-stretch justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body px-2 py-4">
+            <i class="bi bi-piggy-bank-fill" style="font-size: 2em;"></i>
+            <h5 class="card-title">Money management</h5>
+            <p class="card-text">Maximize savings and reach financial goals with our advanced money management feature. Budget wisely and prioritize spending effortlessly for long-term success.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center d-flex align-items-stretch justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body px-2 py-4">
+            <i class="bi bi-file-earmark-bar-graph-fill" style="font-size: 2em;"></i>
+            <h5 class="card-title">Financial report</h5>
+            <p class="card-text">Generate comprehensive financial reports summarizing expenses and income trends. Access detailed breakdowns of spending categories and visualize financial data for better insights.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="row py-5">
+      <div class="col text-center d-flex align-items-stretch justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body px-2 py-4">
+            <i class="bi bi-bar-chart-fill" style="font-size: 2em;"></i>
+            <h5 class="card-title">Audit & Assurance </h5>
+            <p class="card-text">Improve internal controls to enhance the reliability and transparency of financial reporting.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center d-flex align-items-stretch justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body px-2 py-4">
+            <i class="bi bi-coin" style="font-size: 2em;"></i>
+            <h5 class="card-title">Financial plan</h5>
+            <p class="card-text">Develop personalized financial plans tailored to individual goals and circumstances. Analyze income, expenses, assets, and liabilities to create a comprehensive financial overview.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center d-flex align-items-stretch justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body px-2 py-4">
+            <i class="bi bi-kanban" style="font-size: 2em;"></i>
+            <h5 class="card-title">Profit Planning</h5>
+            <p class="card-text">Monitor performance against profit targets and adjust plans as needed to ensure financial success.
 
+
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  
+  <!-- best part  -->
+  <div class="container-fluid py-5 rounded-3"  style="background-color: #a7d9bb;" >
+    <div class="container ">
+        <div class="row ">
+            <div class="col">
+                <div class="d-flex flex-column fade-element">
+                    <div class="mb-3">
+                      </i><h4 class="fs-4"> <i class="bi bi-check-circle fs-5 px-2"></i>Stick to your budget</h4> 
+                      <p>Find the right service for every price point. No hourly rates, just project-based pricing.</p>
+                    </div>           
+            <div class=" mb-3">
+              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2 "></i>Get quality work done quickly</h4>
+              <p>Hand your project over to a talented freelancer in minutes, get long-lasting results.</p>
+            </div>
+            
+            <div class="mb-3">
+              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Count on 24/7 support</h4>
+              <p>Our round-the-clock support team is available to help anytime, anywhere.</p>
+            </div>
+            
+            <div class=" mb-3">
+              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Pay when you're happy</h4>
+              <p>Upfront quotes mean no surprises. Payments only get released when you approve.</p>
+            </div>
+
+            <div class=" mb-3">
+              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Change this</h4>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque deleniti nostrum rerum!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center  fade-element"><img src="Images/what" alt="" height="500px" class="rounded-3"></div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- you need it, we got it  -->
   <div class="container-fluid py-5 " style="background-color: white;">
-    <div class="container text-center">
+    <div class="container text-center py-5">
       <h1 class="py-5 fw-bolder">You need it, we've got it</h1>
       <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 py-5">
         <div class="col">
-          <div class="p-3"><i class="bi bi-currency-dollar" style="font-size: 2em;"></i>
-          </div>
+          <div class="p-3"><i class="bi bi-currency-dollar" style="font-size: 2em;"></i></div>
+          <p class=" fw-bold fs-5">Money management</p>
         </div>
         <div class="col">
           <div class="p-3"><i class="bi bi-graph-up" style="font-size: 2em;"></i></div>
+          <p class=" fw-bold fs-5">Investment tracking</p>
         </div>
         <div class="col">
           <div class="p-3"><i class="bi bi-credit-card" style="font-size: 2em;"></i></div>
+          <p class=" fw-bold fs-5">Goal prioritization</p>
         </div>
         <div class="col">
           <div class="p-3"><i class="bi bi-receipt-cutoff" style="font-size: 2em;"></i></div>
+        <p class=" fw-bold fs-5">Bill reminders</p>
         </div>
         <div class="col">
           <div class="p-3"><i class="bi bi-calculator" style="font-size: 2em;"></i></div>
+        <p class=" fw-bold fs-5">Sync across devices</p>
         </div>
         <div class="col">
           <div class="p-3"><i class="bi bi-bank" style="font-size: 2em;"></i></div>
+        <p class=" fw-bold fs-5">Security features</p>
         </div>
         <div class="col">
           <div class="p-3"><i class="bi bi-wallet2" style="font-size: 2em;"></i></div>
+        <p class=" fw-bold fs-5">Income tracking</p>
         </div>
         <div class="col">
           <div class="p-3"><i class="bi bi-cart3" style="font-size: 2em;"></i></div>
+        <p class=" fw-bold fs-5">Budget tracking</p>
         </div>
         <div class="col">
           <div class="p-3"><i class="bi bi-currency-bitcoin" style="font-size: 2em;"></i></div>
+        <p class=" fw-bold fs-5">Multiple currency support</p>
         </div>
         <div class="col">
           <div class="p-3"><i class="bi bi-check-all" style="font-size: 2em;"></i></div>
+        <p class=" fw-bold fs-5">Secure</p>
         </div>
       </div>
     </div>
@@ -342,8 +352,27 @@ a{
       </div>
     </div>
   </section>
+
+  <!-- experts  -->
+  <section>
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col">
+          <h4 class="text-success">Learn From Experts</h4>
+          <h2>Expert Advisors</h2>
+          <p>"Unlock financial expertise with our platform. Learn from industry-leading experts and gain valuable insights to optimize your financial strategy and achieve your goals."</p>
+          <button type="button" class="btn btn-success  btn-lg" ><a href="contact-us.html " class="text-white" target="_blank" style="font-size: 18px;">Read more</a></button>
+        </div>
+        <div class="col"><img src="Images/advisor1.webp" alt="" style="height: 250px; padding-left: 75px;"></div>
+        <div class="col"><img src="Images/advisor2.png" alt="" style="height: 250px; padding-left: 75px;"></div>
+      </div>
+    </div>
+  </section>
+
+
 </main>
-<footer class=" container text-lg-start  text-muted ">
+
+<footer class=" container-fluid text-lg-start  text-muted ">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
@@ -460,6 +489,8 @@ a{
 
 </footer>
 
+<!-- hidden div script  -->
+  
 <script>
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -468,7 +499,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var scrollPosition = window.scrollY;
 
     // Change this value as per your requirement
-    var scrollToShow = 100;
+    var scrollToShow = 250;
 
     // Show the div when scrolled down to a certain position
     if (scrollPosition > scrollToShow) {
@@ -506,7 +537,24 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 </script>
 
-</body>
+<script>
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() { myFunction() };
 
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+
+  // Adjust for the height of the fixed navigation bar
+  var navbarHeight = document.querySelector('.header').offsetHeight;
+  var progressBar = document.getElementById("myBar");
+  progressBar.style.width = scrolled + "%";
+  progressBar.style.top = navbarHeight + "px";
+}
+
+</script>
+
+</body>
 </html>
   

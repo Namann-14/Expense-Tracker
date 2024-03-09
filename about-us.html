@@ -15,7 +15,7 @@
   
   <!-- icons  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <title>Sign up | Spend Wise</title>
+  <title> About us | Spend Wise</title>
   <link rel="icon" type="image/x-icon" href="Images/rounded-1.png" >
 <style>
 *{
@@ -26,11 +26,6 @@
 body{
   padding-top: 100px;
 }
-
-a{
-  text-decoration: none;
-}
-
 .progress-container {
   width: 100%;
   background-color: #f1f1f1;
@@ -51,68 +46,6 @@ a{
   text-decoration: none;
 }
 </style>
-
-<script>
-
-  function validateForm(){
-    var username = document.getElementById("name");
-    var email = document.getElementById("email");
-    var phone = document.getElementById("phone");
-    var password = document.getElementById("pass");
-  
-
-    if (username.value.trim()=="")
-    {
-      document.getElementById("name").style.border = "solid 2px red";
-      document.getElementById("nameError").style.visibility="visible";
-      return false
-    }
-
-    else if (email.value.trim()=="")
-    {
-      document.getElementById("email").style.border = "solid 2px red";
-      document.getElementById("emailError").style.visibility="visible";
-      return false
-    }
-
-    else if (phone.value.trim()=="")
-    {
-      document.getElementById("phone").style.border = "solid 2px red";
-      document.getElementById("phoneError").style.visibility="visible";
-      document.getElementById("phoneError").innerHTML= "*Phone Number cannot be blank"
-      return false
-    }
-
-    else if (phone.value.trim().length !=10)
-    {
-      document.getElementById("phone").style.border = "solid 2px red";
-      document.getElementById("phoneError").innerHTML= "*Phone number should be 10 digits"
-      return false
-    }
-
-    else if (password.value.trim()=="")
-    {
-      document.getElementById("pass").style.border = "solid 2px red";
-      document.getElementById("passError").style.visibility="visible";
-      return false
-    }
-
-    else if (password.value.trim().length<8)
-    {
-      document.getElementById("pass").style.border = "solid 2px red";
-      document.getElementById("passError").style.display="none";
-      document.getElementById("passError1").style.visibility="visible";
-      return false  
-    }
-    
-    else{
-      true
-    }
-  }
-
-
-</script>
-
 </head>
 <body>
 
@@ -185,89 +118,86 @@ a{
   </div>
 </div>
 </header>
-
-
-  <main> 
-    <div class="container shadow my-5 p-5 rounded" style="background-color: white">
-        <div class="row text-center">
-           
-            <h1 style="font-size: 50px; font-weight: bolder;">
-                Start your journey with us
-            </h1>
+  <main>
+    <div class="container">
+      <h1 class="py-5" style="font-size: 50px; font-weight: bolder;">
+        About Us
+      </h1>
+      <div class="row">
+        <div class="col-md-8" > 
+        <p>
+          Welcome to Spend Wise, your reliable companion in achieving financial wellness. At Spend Wise, we understand the importance of managing your finances effectively to reach your goals and secure your future.
+        </p>
+        <p>
+          Our mission is to empower individuals and businesses with the tools and insights they need to make informed financial decisions. Whether you're tracking personal expenses, managing a small business, or planning for retirement, Spend Wise is here to support you every step of the way.
+        </p>
+        <p>
+          With user-friendly interfaces and powerful features, our platform provides comprehensive solutions for budgeting, expense tracking, investment management, and more. We believe in simplicity, accuracy, and transparency, ensuring that our users have the clarity they need to take control of their finances.
+        </p>
+        <p>
+          Backed by a team of finance experts and technology enthusiasts, Spend Wise is committed to innovation and excellence. We continuously strive to enhance our platform, incorporating the latest advancements in financial technology to deliver an unparalleled user experience.
+        </p>
+        <p>
+          Join thousands of satisfied users who trust Spend Wise to streamline their financial journey. Whether you're just starting or well on your way to financial success, Spend Wise is here to help you thrive.
+        </p>
+        
+          Start your journey to financial wellness today with Spend Wise.
         </div>
-        <div class="row py-5">
-            <div class="col-lg-6" >
-                <img src="images/sign-up-img.jpg" alt="sign up" class="img-fluid " >
-            </div>
-
-
-            <div class="col-lg-6">
-                <h2 style="font-size: 30px; font-weight: bolder;"> 
-                    Create New Account
-                </h2>
-            <form class="py-4" action="sign.in.html" name="myForm" onsubmit="return validateForm()" >
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Name</label> 
-                  <span id="nameError" style="color: red; visibility:hidden;">*Name cannot be blank</span>
-                  <input type="text" class="form-control" id="name" aria-describedby="">
-                  <div id="fname" class="form-text">Enter your full name</div>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <span id="emailError" style="color: red; visibility:hidden;">*Email cannot be blank</span>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                  <div id="" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                  <label for="Phone Number" class="form-label">Phone Number</label>
-                  <span id="phoneError" style="color: red; visibility:hidden;">*Phone Number cannot be blank</span>
-                  <input type="tel" class="form-control" id="phone">
-                  <div id="" class="form-text">Enter your phone number</div>
-                </div>
-                <div class="mb-3">
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="pass" placeholder="Password">
-                        <span id="passError" style="color: red; visibility:hidden;">*Password cannot be blank</span>
-                        <span id="passError1" style="color: red; visibility:hidden;">*Password length should be minimum 8 characters.</span>
-                        <div id="password" class="form-text">Enter a strong password</div>
-                      </div>
-                </div>
-                <div class="mb-3">
-                    <div class="form-group">
-                        <label for="exampleInputPassword1"> Confirm Password</label>
-                        <input type="password" class="form-control" id="pass" placeholder="Password">
-
-                        <div id="" class="form-text">Confirm your password</div>
-                      </div>
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">I agree to the use or processing of my personal information by UrMatch for the purpose of fulfilling this request and in accordance with UrMatch’s Privacy Statement</label>
-                </div>
-                <div class="row">
-                <button type="submit" class="btn btn-success btn-lg my-4">Submit</button>
-                </div>
-                <div class="row text-center">
-                  <div class="col-md-6">
-                      <div class="row">
-                      <button type="button" class="btn btn-outline-success btn-flat"><i class="bi bi-google"></i></button>
-                  </div>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="row m-0">
-                      <button type="button" class="btn btn-outline-success " ><i class="bi bi-facebook"></i></button>
-                  </div>
-                  </div>
-              </div>
-              </form>
-            </div>
+        <div class="col-md-4 px-5" >
+        <h3 class="text-success" style="font-weight: bolder;"> Spend Wise HQ</h3>
+        <h6 style="font-weight: bolder;">ABC Street</h6>
+        <p>Spend Wise AB <br>
+          Regeringsgatan 19 <br>
+          SE-111 53 Stockholm <br>
+          Sweden <br>
+          Reg no: 556703-7485 <br>
+          office@Spend Wise.com
+        </p>
         </div>
-        </div>
+
+      </div>
     </div>
+    <!-- Customer Service and Support -->
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-12 " > 
+        <h2 class="text-center py-5 " style="font-weight: bolder;">
+          Customer Service and Support
+        </h2>
+        <p>
+       <a href="#" class="text-success">1. Community.   </a> Get fast support from expert Spend Wise users. If there isn’t already an answer there to your question, post it and someone will quickly answer. You can also suggest and vote on new ideas for Spend Wise or simply discuss music with other fans.
+        </p>
+        <p>
+        <a href="#" class="text-success">2. Contact Us.  </a> Contact our Customer Support if you don’t find a solution on our support site or Community.
+        </p>
+        <p>
+        <a href="#" class="text-success">3. Audiobook refunds.</a>If you’ve listened to less than 50% of an audiobook purchased in the last 7 days, you may be eligible for a refund. Check out our policy for details.
+        </p>
+        </div>
+      </div>
+    </div>
+    <!-- Or pick a topic: -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="text-center py-5" style="font-weight: bolder;">
+            Or pick a topic:
+          </h2>
+          <ul>
+            <li>Advertising on Spend Wise? <a href="" class="text-success">Advertisers section</a></li>
+            <li>Press query? <a href="" class="text-success">Press section </a></li>
+            <li>Applying for a job? <a href="" class="text-success"> Jobs section</a></li>
+          </ul>
+          <p style="margin-left: 20px;">
+            Spend Wise USA, Inc. provides the Spend Wise service to users in the United States. Spend Wise AB provides the Spend Wise service to users in all other markets.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    
   </main>
-
-
   <footer class=" container-fluid text-lg-start  text-muted ">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -454,3 +384,4 @@ a{
   </body>
   
   </html>
+    

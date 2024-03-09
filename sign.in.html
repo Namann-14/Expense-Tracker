@@ -2,184 +2,157 @@
 <html lang="en">
 
 <head>
+  <!-- styling  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- font  -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  
+  <!-- bootstrap  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- icons  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <style>
-        body {
-      padding-top: 70px; 
-    }
- a {
-      font-size:14px;
-      font-weight:700
-    }
-    .superNav {
-      font-size:13px;
-    }
-    .form-control {
-      outline:none !important;
-      box-shadow: none !important;
-    }
-    @media screen and (max-width:540px){
-      .centerOnMobile {
-        text-align:center
-      }
-    }
-
-.hidden {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  <title> Sign in | Spend Wise</title>
+  <link rel="icon" type="image/x-icon" href="Images/rounded-1.png" >
+<style>
+*{
+  margin: 0px;
+  padding: 0px;
 }
 
-.visible {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+body{
+  padding-top: 100px;
+}
+.progress-container {
+  width: 100%;
+  background-color: #f1f1f1;
 }
 
-
-header {
-    background:transparent;
+.progress-bar {
+  height: 3px;
+  background-color: #4caf50;
+  width: 0%;
 }
 
-.fade-element {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-      }
-      
-      .fade-in {
-        opacity: 1;
-      }
-      
-      a{
-        text-decoration: none;
-      }
-      </style>
-  <title> Sign-in</title>
-      <script>
-        function validateForm(){
-          var email = document.getElementById("email");
-          var password = document.getElementById("pass");
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+}
+a{
+  text-decoration: none;
+}
+</style>
+<script>
+  function validateForm(){
+    var email = document.getElementById("email");
+    var password = document.getElementById("pass");
+
+    if (email.value.trim()=="")
+    {
+      document.getElementById("email").style.border = "solid 2px red";
+      document.getElementById("emailError").style.visibility="visible";
+      return false
+    }
+
+    else if (password.value.trim()=="")
+    {
+      document.getElementById("pass").style.border = "solid 2px red";
+      document.getElementById("passError").style.visibility="visible";
+      document.getElementById("passError").innerHTML="*Password cannot be blank";
+      return false
+    }
+
+    else if (password.value.trim().length<8)
+    {
+      document.getElementById("pass").style.border = "solid 2px red";
+      document.getElementById("passError").innerHTML="*Password length should be minimum 8 characters.";
+      // document.getElementById("passError1").style.visibility="visible";
+      return false  
+    }
     
-          if (email.value.trim()=="")
-          {
-            document.getElementById("email").style.border = "solid 2px red";
-            document.getElementById("emailError").style.visibility="visible";
-            return false
-          }
-    
-          else if (password.value.trim()=="")
-          {
-            document.getElementById("pass").style.border = "solid 2px red";
-            document.getElementById("passError").style.visibility="visible";
-            document.getElementById("passError").innerHTML="*Password cannot be blank";
-            return false
-          }
-    
-          else if (password.value.trim().length<8)
-          {
-            document.getElementById("pass").style.border = "solid 2px red";
-            document.getElementById("passError").innerHTML="*Password length should be minimum 8 characters.";
-            // document.getElementById("passError1").style.visibility="visible";
-            return false  
-          }
-          
-          else{
-            true
-          }
-    
-        }
-    
-      </script>
+    else{
+      true
+    }
+
+  }
+
+</script>
 </head>
-
 <body>
-  <!-- super nav  -->
-  <!-- <div class="superNav border-bottom py-2 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
-          <select  class="me-3 border-0 bg-light">
-            <option value="en-us">EN-US</option>
-          </select>
-          <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3"><strong>info@somedomain.com</strong></span>
-          <span class="me-3"><i class="fa-solid fa-phone me-1 text-success "></i> <strong>1-800-123-1234</strong></span>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
-          <span class="me-3"><i class="fa-solid fa-truck text-muted me-1"></i><a class="text-muted" href="#">Shipping</a></span>
-          <span class="me-3"><i class="fa-solid fa-file  text-muted me-2"></i><a class="text-muted" href="#">Policy</a></span>
-        </div>
-      </div>
-    </div>
-  </div> -->
+
 <header>
+<!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#"><i class="fa-solid  fa-shop me-2"></i> <img src="Images/logo.png" alt="" style="height: 60px;"></a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="Images/logo.png" alt="logo" style="height: 60px;">
+      </a>
   
-      <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
-        <div class="input-group">
-          <span class="border-success  input-group-text bg-success  text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
-          <input type="text" class="form-control border-success " style="color:#7a7a7a">
-          <button class="btn btn-success  text-white">Search</button>
-        </div>
-      </div>
-
       <!-- Hiddden Div -->
-
-      <div class=" collapse navbar-collapse ">
+      <div class=" collapse navbar-collapse">
         <div class="ms-auto d-none d-lg-block">
           <div id="hiddenDiv" class="hidden">
-            <div class="input-group te" >
+            <div class="input-group te">
+
               <input type="text" class="form-control border-success w-auto " style="padding: 4px 150px;" placeholder="What service are you looking for today?">
               <span class="border-success  input-group-text bg-success text-white"><i class="fa fa-search"></i></span>
             
             </div>
           </div>  
         </div>
-
-      <!-- -- -->
-
-        <ul class="navbar-nav ms-auto ">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <strong class="fs-5">Offer</strong>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+  
+      <!-- Toggler/collapsing button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <!-- Navigation links -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">Catalog</a>
+            <a class="nav-link mx-2 text-uppercase" href="#">Transactions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">Services</a>
+            <a class="nav-link mx-2 text-uppercase" href="#">Goals</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">About</a>
+            <a class="nav-link mx-2 text-uppercase" href="#">Profile</a>
           </li>
         </ul>
-        <ul class="navbar-nav ms-auto ">
-          <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Account</a>
+  
+        <!-- Additional actions -->
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ACCOUNT
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sign-up.html">SIGN UP</a></li>
+              <li><a class="dropdown-item" href="sign.in.html">SIGN IN</a></li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  
+<!-- progress bar  -->
 </div>
-
+<div class="header fixed-top">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+</div>
+</header>
     <main> 
         <div class="container shadow my-5 p-5 rounded" style="background-color: white">
             <div class="row text-center">
@@ -217,17 +190,17 @@ header {
                       <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
                     <div class="row">
-                    <button type="submit" class="btn btn-primary btn-lg  my-4">Submit</button>
+                    <button type="submit" class="btn btn-success btn-lg  my-4">Submit</button>
                     </div>
                     <div class="row text-center">
                         <div class="col-md-6">
                             <div class="row">
-                            <button type="button" class="btn btn-outline-danger btn-flat" style="background-color: lightcoral;"><a href="#" class="fa fa-google text-decoration-none" ></a></button>
+                            <button type="button" class="btn btn-outline-success btn-flat"><i class="bi bi-google"></i></button>
                         </div>
                         </div>
                         <div class="col-md-6">
                             <div class="row m-0">
-                            <button type="button" class="btn btn-outline-info " style="background-color: lightblue;"><a href="#" class="fa fa-facebook text-decoration-none"></a></button>
+                            <button type="button" class="btn btn-outline-success " ><i class="bi bi-facebook"></i></button>
                         </div>
                         </div>
                     </div>
@@ -238,7 +211,7 @@ header {
         </div>
       </main>
 
-      <footer class=" container text-lg-start  text-muted ">
+      <footer class=" container-fluid text-lg-start  text-muted ">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
           <!-- Left -->
@@ -355,8 +328,72 @@ header {
       
       </footer>
       
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-</html>
+      <!-- hidden div script  -->
+        
+      <script>
+      
+      document.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("scroll", function() {
+          var hiddenDiv = document.getElementById("hiddenDiv");
+          var scrollPosition = window.scrollY;
+      
+          // Change this value as per your requirement
+          var scrollToShow = 250;
+      
+          // Show the div when scrolled down to a certain position
+          if (scrollPosition > scrollToShow) {
+            hiddenDiv.classList.remove("hidden");
+          } else {
+            hiddenDiv.classList.add("hidden");
+          }
+        });
+      });
+      
+      
+      
+      </script>
+      
+      <script>
+        window.addEventListener('scroll', function() {
+            const fadeElements = document.querySelectorAll('.fade-element');
+      
+            fadeElements.forEach(function(element) {
+                if (isElementInViewport(element)) {
+                    element.classList.add('fade-in');
+                }
+            });
+        });
+      
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+      
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+      </script>
+      
+      <script>
+        // When the user scrolls the page, execute myFunction
+      window.onscroll = function() { myFunction() };
+      
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+      
+        // Adjust for the height of the fixed navigation bar
+        var navbarHeight = document.querySelector('.header').offsetHeight;
+        var progressBar = document.getElementById("myBar");
+        progressBar.style.width = scrolled + "%";
+        progressBar.style.top = navbarHeight + "px";
+      }
+      
+      </script>
+      
+      </body>
+      
+      </html>
