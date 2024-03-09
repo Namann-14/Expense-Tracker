@@ -81,7 +81,9 @@ a{
   }
 
 </script>
+
 </head>
+
 <body>
 
 <header>
@@ -89,7 +91,7 @@ a{
   <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
     <div class="container">
       <!-- Logo -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="Images/logo.png" alt="logo" style="height: 60px;">
       </a>
   
@@ -153,65 +155,66 @@ a{
   </div>
 </div>
 </header>
-    <main> 
-        <div class="container shadow my-5 p-5 rounded" style="background-color: white">
-            <div class="row text-center">
-               
-                <h1 style="font-size: 50px; font-weight: bolder;">
-                    Log in to your account
-                </h1>
+
+<main> 
+    <div class="container shadow my-5 p-5 rounded" style="background-color: white">
+        <div class="row text-center">
+            
+            <h1 style="font-size: 50px; font-weight: bolder;">
+                Log in to your account
+            </h1>
+        </div>
+        <div class="row py-5 ">
+            <div class="col px-4" >
+                <img src="Images/login.jpeg" alt="sign up" class="img-fluid rounded" >
             </div>
-            <div class="row py-5 ">
-                <div class="col-lg-6 px-4" >
-                    <img src="images/stud.png" alt="sign up" class="img-fluid rounded" >
+            <div class="col py-5">
+                <h2 style="font-size: 30px; font-weight: bolder;"> 
+                    Please enter your login information 
+                </h2>
+            <form class="py-4" action="index-riyal.html" name="myForm" onsubmit="return validateForm()">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <span id="emailError" style="color: red; visibility:hidden;">*Email cannot be blank</span>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
-                <div class="col-lg-6">
-                    <h2 style="font-size: 30px; font-weight: bolder;"> 
-                        Please enter your login information 
-                    </h2>
-                <form class="py-4" action="index-riyal.html" name="myForm" onsubmit="return validateForm()">
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <span id="emailError" style="color: red; visibility:hidden;">*Email cannot be blank</span>
-                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <span id="passError" style="color: red; visibility:hidden;">*Password cannot be blank</span>
-                            <!-- <span id="passError1" style="color: red; visibility:hidden;">*Password length should be minimum 8 characters.</span> -->
-                            <input type="password" class="form-control" id="pass" placeholder="Password">
-                            <div id="password" class="form-text">Forget Password? </div>
-                          </div>
-                    </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                    </div>
-                    <div class="row">
-                    <button type="submit" class="btn btn-success btn-lg  my-4">Submit</button>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-6">
-                            <div class="row">
-                            <button type="button" class="btn btn-outline-success btn-flat"><i class="bi bi-google"></i></button>
-                        </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row m-0">
-                            <button type="button" class="btn btn-outline-success " ><i class="bi bi-facebook"></i></button>
-                        </div>
-                        </div>
-                    </div>
-                  </form>
+                <div class="mb-3">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <span id="passError" style="color: red; visibility:hidden;">*Password cannot be blank</span>
+                        <!-- <span id="passError1" style="color: red; visibility:hidden;">*Password length should be minimum 8 characters.</span> -->
+                        <input type="password" class="form-control" id="pass" placeholder="Password">
+                        <div id="password" class="form-text">Forget Password? </div>
+                      </div>
                 </div>
-            </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+                <div class="row">
+                <button type="submit" class="btn btn-success btn-lg  my-4">Submit</button>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-6">
+                        <div class="row">
+                        <button type="button" class="btn btn-outline-success btn-flat"><i class="bi bi-google"></i></button>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row m-0">
+                        <button type="button" class="btn btn-outline-success " ><i class="bi bi-facebook"></i></button>
+                    </div>
+                    </div>
+                </div>
+              </form>
             </div>
         </div>
-      </main>
+        </div>
+    </div>
+</main>
 
-      <footer class=" container-fluid text-lg-start  text-muted ">
+<footer class=" container-fluid text-lg-start  text-muted ">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
           <!-- Left -->
@@ -326,74 +329,68 @@ a{
           <a class="text-reset" href="#">Spend Wise</a>
         </div>
       
-      </footer>
+</footer>
       
-      <!-- hidden div script  -->
-        
-      <script>
-      
-      document.addEventListener("DOMContentLoaded", function() {
-        window.addEventListener("scroll", function() {
-          var hiddenDiv = document.getElementById("hiddenDiv");
-          var scrollPosition = window.scrollY;
-      
-          // Change this value as per your requirement
-          var scrollToShow = 250;
-      
-          // Show the div when scrolled down to a certain position
-          if (scrollPosition > scrollToShow) {
-            hiddenDiv.classList.remove("hidden");
-          } else {
-            hiddenDiv.classList.add("hidden");
+<!-- hidden div script  -->        
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  window.addEventListener("scroll", function() {
+    var hiddenDiv = document.getElementById("hiddenDiv");
+    var scrollPosition = window.scrollY;
+
+    // Change this value as per your requirement
+    var scrollToShow = 250;
+
+    // Show the div when scrolled down to a certain position
+    if (scrollPosition > scrollToShow) {
+      hiddenDiv.classList.remove("hidden");
+    } else {
+      hiddenDiv.classList.add("hidden");
+    }
+  });
+});
+</script>
+
+<!-- fade in  -->
+<script>
+  window.addEventListener('scroll', function() {
+      const fadeElements = document.querySelectorAll('.fade-element');
+
+      fadeElements.forEach(function(element) {
+          if (isElementInViewport(element)) {
+              element.classList.add('fade-in');
           }
-        });
       });
-      
-      
-      
-      </script>
-      
-      <script>
-        window.addEventListener('scroll', function() {
-            const fadeElements = document.querySelectorAll('.fade-element');
-      
-            fadeElements.forEach(function(element) {
-                if (isElementInViewport(element)) {
-                    element.classList.add('fade-in');
-                }
-            });
-        });
-      
-        function isElementInViewport(el) {
-            const rect = el.getBoundingClientRect();
-      
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-      </script>
-      
-      <script>
-        // When the user scrolls the page, execute myFunction
-      window.onscroll = function() { myFunction() };
-      
-      function myFunction() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-      
-        // Adjust for the height of the fixed navigation bar
-        var navbarHeight = document.querySelector('.header').offsetHeight;
-        var progressBar = document.getElementById("myBar");
-        progressBar.style.width = scrolled + "%";
-        progressBar.style.top = navbarHeight + "px";
-      }
-      
-      </script>
-      
-      </body>
-      
-      </html>
+  });
+  function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+
+      return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+  }
+</script>
+
+<!-- progress bar  -->
+<script>
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() { myFunction() };
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+
+  // Adjust for the height of the fixed navigation bar
+  var navbarHeight = document.querySelector('.header').offsetHeight;
+  var progressBar = document.getElementById("myBar");
+  progressBar.style.width = scrolled + "%";
+  progressBar.style.top = navbarHeight + "px";
+}
+
+</script>
+
+</body>
+</html>
