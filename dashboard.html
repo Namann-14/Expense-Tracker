@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <!-- styling  -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <!-- font  -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  
+  <!-- bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- icons  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Spend Wise</title>
+  
+  <link rel="icon" type="image/x-icon" href="Images/rounded-1.png" >
+  <link rel="stylesheet" href="BlueBox.css">
+  <script src="script.js"></script>
+<style>
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  padding-top: 100px;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-bar {
+  height: 3px;
+  background-color: #4caf50;
+  width: 0%;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+}
+a{
+  text-decoration: none;
+}
+ .card {
+    background: linear-gradient(to left,  #0ba360, #3cba92, #30dd8a, #2bb673);
+    background-size: 200%;
+    background-position: right; 
+    color: white; 
+  }
+
+
+
+  .card:hover {
+    background-position: left;
+
+  }
+  .card {
+    transition: background-position 0.5s ease-in-out;
+  }
+</style>
+</head>
+<body>
+
+<header>
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="Images/logo.png" alt="logo" style="height: 60px;">
+      </a>
+  
+      <!-- Hiddden Div -->
+      <div class=" collapse navbar-collapse">
+        <div class="ms-auto d-none d-lg-block">
+          <div id="hiddenDiv" class="hidden">
+            <div class="input-group te">
+
+              <input type="text" class="form-control border-success w-auto " style="padding: 4px 150px;" placeholder="What service are you looking for today?">
+              <span class="border-success  input-group-text bg-success text-white"><i class="fa fa-search"></i></span>
+            
+            </div>
+          </div>  
+        </div>
+  
+      <!-- Toggler/collapsing button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <!-- Navigation links -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Transactions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Goals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="#">Profile</a>
+          </li>
+        </ul>
+  
+        <!-- Additional actions -->
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ACCOUNT
+            </a>
+            <ul class="dropdown-menu text-center">
+              <li><a class="dropdown-item" href="sign-up.html">SIGN UP</a></li>
+              <li><a class="dropdown-item" href="sign.in.html">SIGN IN</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<!-- progress bar  -->
+</div>
+<div class="header fixed-top">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+</div>
+</header>
+
+<main>
+<div class="container my-5">
+    <div class="row">
+        <div id="color-1" class="col text-center d-flex align-items-stretch justify-content-center ">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body px-2 py-4 d-flex flex-column justify-content-center align-items-center">
+                <h5 class="card-title fw-bold">Total Income</h5>
+                <h1 class="fw-bold">$579,000</h1>
+                <p> Saved 25%</p>
+              </div>
+            </div>
+        </div>
+        <div class="col text-center d-flex align-items-stretch justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body px-2 py-4 d-flex flex-column justify-content-center align-items-center">
+                <h5 class="card-title fw-bold">Total Expense</h5>
+                <h1 class="fw-bold">$79,000</h1>
+                <p> Saved 25%</p>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center d-flex align-items-stretch justify-content-center color-2">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body px-2 py-4 d-flex flex-column justify-content-center align-items-center">
+                <h5 class="card-title fw-bold">Cash on Hand</h5>
+                <h1 class="fw-bold">$92,000</h1>
+                <p> Saved 25%</p>
+              </div>
+            </div>
+          </div>
+          <div class="col text-center d-flex align-items-stretch justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body px-2 py-4 d-flex flex-column justify-content-center align-items-center">
+                <h5 class="card-title fw-bold">Net Profit Margin</h5>
+                <h1 class="fw-bold">$179,000</h1>
+                <p> Saved 65%</p>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="Images/left1.png" alt="" height="430px">
+        </div>
+        <div class="col">
+            <img src="Images/middle1.png" alt="" height="400px">
+            <img src="Images/right1.png" alt="" height="400px">
+        </div>
+    </div>
+</div>
+</main>
+
+<footer class=" container-fluid text-lg-start  text-muted ">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-facebook fs"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+    </section>
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i><img src="Images/logo.png" alt="" style="height: 50px;">
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="bi bi-house"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="bi bi-envelope"></i>
+              info@example.com
+            </p>
+            <p><i class="bi bi-telephone"></i> + 01 234 567 88</p>
+            <p><i class="bi bi-printer"></i>   + 01 234 567 89</p>
+          </div>
+  
+        </div>
+  
+      </div>
+    </section>
+  
+  
+  
+    <div class="text-center p-4" >
+      © 2024 Copyright:
+      <a class="text-reset" href="#">Spend Wise</a>
+    </div>
+  
+</footer>
+  
+  <!-- hidden div script  -->  
+  <script>
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function() {
+      var hiddenDiv = document.getElementById("hiddenDiv");
+      var scrollPosition = window.scrollY;
+  
+      // Change this value as per your requirement
+      var scrollToShow = 250;
+  
+      // Show the div when scrolled down to a certain position
+      if (scrollPosition > scrollToShow) {
+        hiddenDiv.classList.remove("hidden");
+      } else {
+        hiddenDiv.classList.add("hidden");
+      }
+    });
+  });
+  
+  
+  
+  </script>
+  
+  <!-- fade in  -->
+  <script>
+    window.addEventListener('scroll', function() {
+        const fadeElements = document.querySelectorAll('.fade-element');
+  
+        fadeElements.forEach(function(element) {
+            if (isElementInViewport(element)) {
+                element.classList.add('fade-in');
+            }
+        });
+    });
+  
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+  
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+  </script>
+  
+  <!-- progress bar  -->
+  <script>
+    // When the user scrolls the page, execute myFunction
+  window.onscroll = function() { myFunction() };
+  
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+  
+    // Adjust for the height of the fixed navigation bar
+    var navbarHeight = document.querySelector('.header').offsetHeight;
+    var progressBar = document.getElementById("myBar");
+    progressBar.style.width = scrolled + "%";
+    progressBar.style.top = navbarHeight + "px";
+  }
+  
+  </script>
+  
+  <!-- blue box  -->
+  
+  
+  </body>
+  </html>
+    
