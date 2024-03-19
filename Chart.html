@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
   <!-- styling  -->
-  <!-- <link rel="stylesheet" href="style.css">   -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
 
   <!-- font  -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -20,89 +20,42 @@
   
   <link rel="icon" type="image/x-icon" href="Images/rounded-1.png" >
   <link rel="stylesheet" href="BlueBox.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: Arial, sans-serif;
-    }
-
-    .card-header {
-      background-color: #007bff;
-      color: #fff;
-    }
-    .card-body {
-      background-color: #fff;
-    }
-    .card-footer {
-      background-color: #f8f9fa;
-    }
-    /* .btn-edit,
-    .btn-delete {
-      margin-right: 5px;
-    } */
-    .expense-item {
-      animation: fadeInUp 0.5s ease forwards;
-      opacity: 0;
-    }
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .expense-item:hover {
-      transition: transform 0.3s ease;
-      transform: scale(1.05);
-    }
-    /* .total-box {
-      background-color: #f8f9fa;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    } */
-  </style>
-
+  <script src="script.js"></script>
 <style>
-  *{
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  body{
-    padding-top: 100px;
-  }
-  
-  a{
-    text-decoration: none !important;
-  }
-  
-  .progress-container {
-    width: 100%;
-    background-color: #f1f1f1;
-  }
-  
-  .progress-bar {
-    height: 3px;
-    background-color: #4caf50;
-    width: 0%;
-  }
-  
-  @media (max-width: 991.98px) {
-    .navbar-collapse {
-      display: none !important;
-    }
-  }
-  a{ 
-    text-decoration: none;
-  }
-  
-</style>
+*{
+  margin: 0px;
+  padding: 0px;
+}
 
+body{
+  padding-top: 100px;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-bar {
+  height: 3px;
+  background-color: #4caf50;
+  width: 0%;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+}
+a{
+  text-decoration: none;
+}
+
+</style>
 </head>
 <body>
 
@@ -160,16 +113,15 @@
     </div>
 </header>
 
-
 <main>
   <div class="container py-5">
-    <div class="expense-card">
-      <div class="expense-card-header bg-success">
-        <h1 class="text-center fw-bolder">Expense Tracker</h1>
+    <div class="card">
+      <div class="card-header bg-success text-center">
+        <h1 class="fw-bold text-white">Expense Tracker</h1>
       </div>
-      <div class="expense-card-body">
+      <div class="card-body">
         <form id="expenseForm">
-          <div class="row gx-3">
+          <div class="row gx-3 align-items-center">
             <div class="col-md-4 mb-3">
               <input type="text" class="form-control" placeholder="Expense Type" id="expenseType" required>
             </div>
@@ -178,9 +130,7 @@
             </div>
             <div class="col-md-3 mb-3">
               <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">$</span>
-                </div>
+                <span class="input-group-text">$</span>
                 <input type="number" class="form-control" placeholder="Amount" id="amount" required>
               </div>
             </div>
@@ -190,7 +140,7 @@
           </div>
         </form>
       </div>
-      <div class="expense-card-footer">
+      <div class="card-footer">
         <h2 class="mb-3">Expense List</h2>
         <div id="expenseList"></div>
         <div class="total-box mt-4">
@@ -322,7 +272,6 @@
   </div>
 
 </footer>
-  
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -423,6 +372,8 @@
   document.getElementById('expenseForm').addEventListener('submit', addExpense);
 </script>
 
+
+
 <!-- hidden div script  -->  
 <script>
 
@@ -495,4 +446,3 @@ function myFunction() {
 
 </body>
 </html>
-  
