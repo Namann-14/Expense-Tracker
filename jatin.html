@@ -97,7 +97,7 @@
       display: none !important;
     }
   }
-  a{
+  a{ 
     text-decoration: none;
   }
   
@@ -106,92 +106,77 @@
 </head>
 <body>
 
- <header>
+<header>
     <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
         <div class="container">
-          <!-- Logo -->
-          <a class="navbar-brand" href="#">
-            <img src="Images/logo.png" alt="logo" style="height: 60px;">
-          </a>
-      
-          <!-- Hiddden Div -->
-          <div class=" collapse navbar-collapse">
-            <div class="ms-auto d-none d-lg-block">
-              <div id="hiddenDiv" class="hidden">
-                <div class="input-group te">
-    
-                  <input type="text" class="form-control border-success w-auto " style="padding: 4px 150px;" placeholder="What service are you looking for today?">
-                  <span class="border-success  input-group-text bg-success text-white"><i class="fa fa-search"></i></span>
-                
-                </div>
-              </div>  
-            </div>
-      
-          <!-- Toggler/collapsing button -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <!-- Collapsible content -->
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <!-- Navigation links -->
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="#">Dashboard</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="#">Transactions</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="#">Goals</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="#">Profile</a>
-              </li>
-            </ul>
-      
-            <!-- Additional actions -->
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  ACCOUNT
-                </a>
-                <ul class="dropdown-menu text-center">
-                  <li><a class="dropdown-item" href="sign-up.html">SIGN UP</a></li>
-                  <li><a class="dropdown-item" href="sign.in.html">SIGN IN</a></li>
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="Images/logo.png" alt="logo" style="height: 60px;">
+            </a>
+
+            <!-- Toggler/collapsing button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <!-- Navigation links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Transactions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Goals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Profile</a>
+                    </li>
                 </ul>
-              </li>
-            </ul>
-          </div>
+
+                <!-- Additional actions -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ACCOUNT
+                        </a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item" href="sign-up.html">SIGN UP</a></li>
+                            <li><a class="dropdown-item" href="sign.in.html">SIGN IN</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-      
-    <!-- progress bar  -->
-    </div>
-    <div class="header fixed-top">
-      <div class="progress-container">
+    </nav>
+
+    <!-- progress bar -->
+    <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
-      </div>
     </div>
 </header>
 
+
 <main>
   <div class="container py-5">
-    <div class="card">
-      <div class="card-header bg-success">
+    <div class="expense-card">
+      <div class="expense-card-header bg-success">
         <h1 class="text-center fw-bolder">Expense Tracker</h1>
       </div>
-      <div class="card-body">
+      <div class="expense-card-body">
         <form id="expenseForm">
-          <div class="form-row">
-            <div class="col">
+          <div class="row gx-3">
+            <div class="col-md-4 mb-3">
               <input type="text" class="form-control" placeholder="Expense Type" id="expenseType" required>
             </div>
-            <div class="col">
+            <div class="col-md-3 mb-3">
               <input type="date" class="form-control" id="date" required>
             </div>
-            <div class="col">
+            <div class="col-md-3 mb-3">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">$</span>
@@ -199,24 +184,27 @@
                 <input type="number" class="form-control" placeholder="Amount" id="amount" required>
               </div>
             </div>
-            <div class="col">
+            <div class="col-md-2">
               <button type="submit" class="btn btn-primary btn-block">Add Expense</button>
             </div>
           </div>
         </form>
       </div>
-      <div class="card-footer">
-        <h2>Expense List</h2>
+      <div class="expense-card-footer">
+        <h2 class="mb-3">Expense List</h2>
         <div id="expenseList"></div>
-        <div class="total-box">
+        <div class="total-box mt-4">
           <h3>Total Money Spent</h3>
           <p id="totalAmount">$0</p>
         </div>
-        <canvas id="expenseChart" width="800" height="400"></canvas>
+        <div class="mt-5">
+          <canvas id="expenseChart" width="800" height="400"></canvas>
+        </div>
       </div>
     </div>
   </div>
 </main>
+
 
 <footer class=" container-fluid text-lg-start  text-muted ">
   <!-- Section: Social media -->

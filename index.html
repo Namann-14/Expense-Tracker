@@ -60,216 +60,215 @@ a{
 <body>
 
 <header>
-<!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
-    <div class="container">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="Images/logo.png" alt="logo" style="height: 60px;">
-      </a>
-  
-      <!-- Hiddden Div -->
-      <div class=" collapse navbar-collapse">
-        <div class="ms-auto d-none d-lg-block">
-          <div id="hiddenDiv" class="hidden">
-            <div class="input-group te">
-
-              <input type="text" class="form-control border-success w-auto " style="padding: 4px 150px;" placeholder="What service are you looking for today?">
-              <span class="border-success  input-group-text bg-success text-white"><i class="fa fa-search"></i></span>
-            
-            </div>
-          </div>  
-        </div>
-  
-      <!-- Toggler/collapsing button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <!-- Navigation links -->
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">Transactions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">Goals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2 text-uppercase" href="#">Profile</a>
-          </li>
-        </ul>
-  
-        <!-- Additional actions -->
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ACCOUNT
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="Images/logo.png" alt="logo" style="height: 60px;">
             </a>
-            <ul class="dropdown-menu text-center">
-              <li><a class="dropdown-item" href="sign-up.html">SIGN UP</a></li>
-              <li><a class="dropdown-item" href="sign.in.html">SIGN IN</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+
+            <!-- Toggler/collapsing button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <!-- Navigation links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Transactions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Goals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="#">Profile</a>
+                    </li>
+                </ul>
+
+                <!-- Additional actions -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ACCOUNT
+                        </a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item" href="sign-up.html">SIGN UP</a></li>
+                            <li><a class="dropdown-item" href="sign.in.html">SIGN IN</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- progress bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
     </div>
-  </nav>
-  
-<!-- progress bar  -->
-</div>
-<div class="header fixed-top">
-  <div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-  </div>
-</div>
 </header>
 
 
 <main>
 
   <div class="container py-5">
-    <div class="row d-flex justify-content-center align-items-center py-5">
-      <div class="col">
-        <h1 class="fw-bolder">Make your Finance management better. Instantly</h1>
+    <div class="row justify-content-center align-items-center py-5">
+      <div class="col-md-6">
+        <h1 class="fw-bolder">Manage your Expenses, Swiftly</h1>
         <p><i>Transform your financial journey with ease and efficiency, starting now.</i></p>
         <div class="row">
-          <button type="button" class="btn btn-success btn-lg btn-block">Join Now</button>
+          <div class="col-8 col-md-12">
+            <a href="sign-up.html">
+              <button type="button" class="btn btn-success btn-lg btn-block">Start Now</button>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <img src="Images/new1.jpg" alt="" style="height: 300px;">
+      <div class="col-md-6">
+        <br>
+        <img src="Images/new1.jpg" alt="" style="height: 300px;" class="rounded-3 img-fluid">
       </div>
     </div>
   </div>
+  
   
 
   <!-- About us   -->
-  <div class="container-fluid rounded-3 py-5 " style="background-color:#FAF9F6;">
+  <div class="container-fluid rounded-3 py-5" style="background-color:#FAF9F6;">
     <div class="container">
-    <div class="row py-5" >
-      <div class="col">
-        <img src="Images/about us" alt="" style="height: 400px;" class="rounded-3">
+      <div class="row py-5">
+        <div class="col-md-6">
+          <img src="Images/about us" alt="" style="height: auto; max-height: 400px; width: 100%;" class="rounded-3 img-fluid">
+        </div>
+        <div class="col-md-6">
+          <h4 class="text-success fw-bolder">About Us</h4>
+          <h2>Discover the world of Financial Planning</h2>
+          <p>Embark on a journey through the realm of Financial Planning, where strategic insights and tailored solutions pave the way to financial stability and prosperity. Explore diverse strategies, smart investments, and expert guidance to navigate the complexities of wealth management and achieve your financial goals.</p>
+          <a href="about-us.html" class="text-white" style="font-size: 18px;">
+            <button type="button" class="btn btn-success btn-lg">Read more</button>
+          </a>
+        </div>
       </div>
-      <div class="col">
-        <h4 class="text-success fw-bolder">About Us</h4>
-        <h2>Discover the world of Financial Planner</h2>
-        <p>Embark on a journey through the realm of Financial Planning, where strategic insights and tailored solutions pave the way to financial stability and prosperity. Explore diverse strategies, smart investments, and expert guidance to navigate the complexities of wealth management and achieve your financial goals.</p>
-        <button type="button" class="btn btn-success btn-lg" >
-          <a href="about-us.html" class="text-white" target="_blank" style="font-size: 18px;">Read more</a>
-      </button>
-      
-      </div>
-    </div>
     </div>
   </div>
+  
   
   <!-- our servies  -->
   <section>
-  <div class="container py-5 ">
-    <div class="row py-5 d-flex align-items-stretch  ">
-      <div class="col d-flex align-items-stretch justify-content-center flex-column ">
-        <h5 class="text-success fw-bolder ">Our Services</h5>
-        <h2>What we offer</h2>
-        <p>"Experience comprehensive financial solutions tailored to your needs. Our offerings include personalized financial planning, investment management, retirement planning, and risk assessment. Let us guide you towards financial security and success, every step of the way."</p>
-        <button type="button" class="btn btn-success  btn-lg ">Read more</button>
-      </div>
-      <div class="col text-center d-flex align-items-stretch justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body px-2 py-4">
-            <i class="bi bi-piggy-bank-fill" style="font-size: 2em;"></i>
-            <h5 class="card-title">Money management</h5>
-            <p class="card-text">Maximize savings and reach financial goals with our advanced money management feature. Budget wisely and prioritize spending effortlessly for long-term success.</p>
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="text-center">
+            <h5 class="text-success fw-bolder">Our Services</h5>
+            <h2>What we offer</h2>
+            <p>"Experience comprehensive financial solutions tailored to your needs. Our offerings include personalized financial planning, investment management, retirement planning, and risk assessment. Let us guide you towards financial security and success, every step of the way."</p>
+            <button type="button" class="btn btn-success btn-lg">Read more</button>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row gy-4">
+            <div class="col-lg-4">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  <i class="bi bi-piggy-bank-fill" style="font-size: 2em;"></i>
+                  <h5 class="card-title">Money management</h5>
+                  <p class="card-text">Maximize savings and reach financial goals with our advanced money management feature. Budget wisely and prioritize spending effortlessly for long-term success.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  <i class="bi bi-file-earmark-bar-graph-fill" style="font-size: 2em;"></i>
+                  <h5 class="card-title">Financial report</h5>
+                  <p class="card-text">Generate comprehensive financial reports summarizing expenses and income trends. Access detailed breakdowns of spending categories and visualize financial data for better insights.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  <i class="bi bi-bar-chart-fill" style="font-size: 2em;"></i>
+                  <h5 class="card-title">Audit & Assurance</h5>
+                  <p class="card-text">Improve internal controls to enhance the reliability and transparency of financial reporting.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  <i class="bi bi-coin" style="font-size: 2em;"></i>
+                  <h5 class="card-title">Financial plan</h5>
+                  <p class="card-text">Develop personalized financial plans tailored to individual goals and circumstances. Analyze income, expenses, assets, and liabilities to create a comprehensive financial overview.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  <i class="bi bi-kanban" style="font-size: 2em;"></i>
+                  <h5 class="card-title">Profit Planning</h5>
+                  <p class="card-text">Monitor performance against profit targets and adjust plans as needed to ensure financial success.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card h-100">
+                <div class="card-body text-center">
+                  <i class="bi bi-kanban" style="font-size: 2em;"></i>
+                  <h5 class="card-title">Profit Planning</h5>
+                  <p class="card-text">Monitor performance against profit targets and adjust plans as needed to ensure financial success.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col text-center d-flex align-items-stretch justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body px-2 py-4">
-            <i class="bi bi-file-earmark-bar-graph-fill" style="font-size: 2em;"></i>
-            <h5 class="card-title">Financial report</h5>
-            <p class="card-text">Generate comprehensive financial reports summarizing expenses and income trends. Access detailed breakdowns of spending categories and visualize financial data for better insights.</p>
-          </div>
-        </div>
-      </div>
-      
     </div>
-    <div class="row py-5">
-      <div class="col text-center d-flex align-items-stretch justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body px-2 py-4">
-            <i class="bi bi-bar-chart-fill" style="font-size: 2em;"></i>
-            <h5 class="card-title">Audit & Assurance </h5>
-            <p class="card-text">Improve internal controls to enhance the reliability and transparency of financial reporting.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col text-center d-flex align-items-stretch justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body px-2 py-4">
-            <i class="bi bi-coin" style="font-size: 2em;"></i>
-            <h5 class="card-title">Financial plan</h5>
-            <p class="card-text">Develop personalized financial plans tailored to individual goals and circumstances. Analyze income, expenses, assets, and liabilities to create a comprehensive financial overview.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col text-center d-flex align-items-stretch justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body px-2 py-4">
-            <i class="bi bi-kanban" style="font-size: 2em;"></i>
-            <h5 class="card-title">Profit Planning</h5>
-            <p class="card-text">Monitor performance against profit targets and adjust plans as needed to ensure financial success.
-
-
-
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   </section>
+  
 
   
   <!-- best part  -->
-  <div class="container-fluid py-5 rounded-3"  style="background-color: #a7d9bb;" >
-    <div class="container ">
-        <div class="row ">
-            <div class="col py-4">
-                <div class="d-flex flex-column fade-element">
-                    <div class="mb-3">
-                      </i><h4 class="fs-4"> <i class="bi bi-check-circle fs-5 px-2"></i>Stick to your budget</h4> 
-                      <p>Find the right service for every price point. No hourly rates, just project-based pricing.</p>
-                    </div>           
-            <div class=" mb-3">
-              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2 "></i>Get quality work done quickly</h4>
-              <p>Hand your project over to a talented freelancer in minutes, get long-lasting results.</p>
-            </div>
-            
+  <div class="container-fluid py-5 rounded-3" style="background-color: #a7d9bb;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 py-4">
+          <div class="d-flex flex-column fade-element">
             <div class="mb-3">
-              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Count on 24/7 support</h4>
-              <p>Our round-the-clock support team is available to help anytime, anywhere.</p>
+              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Financial Awareness</h4> 
+              <p>Understand where the money is being spent and get a hold of your spending patterns</p>
+            </div>           
+            <div class="mb-3">
+              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Setting up of Goals</h4>
+              <p>Facilitates in setting up of financial goals, be it saving up for a vacation or paying off debt</p>
             </div>
-            
-            <div class=" mb-3">
-              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Pay when you're happy</h4>
-              <p>Upfront quotes mean no surprises. Payments only get released when you approve.</p>
+            <div class="mb-3">
+              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Accessibility and Convenience</h4>
+              <p>Accessible anytime, anywhere. Simplify expense tracking on-the-go</p>
             </div>
-
-            <div class=" mb-3">
-              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Change this</h4>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque deleniti nostrum rerum!</p>
+            <div class="mb-3">
+              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Security</h4>
+              <p>Your financial data is kept secure</p>
+            </div>
+            <div class="mb-3">
+              <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Visualize Expenses</h4>
+              <p>Provides visualizations like graphs for better financial expense understanding</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 text-center  fade-element"><img src="Images/what" alt="" height="500px" class="rounded-3"></div>
+        <div class="col-lg-6 text-center fade-element">
+          <img src="Images/what" alt="" style="max-height: 500px; width: 100%;" class="rounded-3 img-fluid">
+        </div>
       </div>
     </div>
   </div>
+  
   
   <!-- you need it, we got it  -->
   <div class="container-fluid py-5 " style="background-color: white;">
