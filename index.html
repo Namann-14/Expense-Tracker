@@ -1,117 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
   <!-- styling  -->
   <link rel="stylesheet" href="style.css">
-
   <!-- font  -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  
   <!-- bootstrap  -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- icons  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <title>Spend Wise</title>
-  
-  <link rel="icon" type="image/x-icon" href="Images/rounded-1.png" >
-  <link rel="stylesheet" href="BlueBox.css">
-  <script src="script.js"></script>
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="Images/rounded-1.png">
 <style>
-*{
-  margin: 0px;
-  padding: 0px;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-body{
-  padding-top: 100px;
-}
-
-a{
-  text-decoration: none !important;
+a {
+    text-decoration: none !important;
 }
 
 .progress-container {
-  width: 100%;
-  background-color: #f1f1f1;
-}
-
-.progress-bar {
-  height: 3px;
-  background-color: #4caf50;
-  width: 0%;
-}
-
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    display: none !important;
-  }
-}
-a{
-  text-decoration: none;
+    width: 100%;
+    background-color: #f1f1f1;
 }
 
 </style>
 </head>
 <body>
-
-<header>
-    <!-- Navbar -->
+  <header>
     <nav class="navbar navbar-expand-lg bg-white fixed-top navbar-light p-3 shadow-sm">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="Images/logo.png" alt="logo" style="height: 60px;">
-            </a>
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="Images/logo.png" alt="logo" style="height: 60px;">
+        </a>
 
-            <!-- Toggler/collapsing button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <!-- Navigation links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-uppercase" href="dashboard1.html">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-uppercase" href="about-us.html">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-uppercase" href="contact-us.html">contact-us</a>
-                    </li>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="dashboard1.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="about-us.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="contact-us.html">contact-us</a>
+            </li>
+          </ul>
 
-                </ul>
-
-                <!-- Additional actions -->
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            ACCOUNT
-                        </a>
-                        <ul class="dropdown-menu text-center">
-                            <li><a class="dropdown-item" href="sign-up.html">SIGN UP</a></li>
-                            <li><a class="dropdown-item" href="sign.in.html">SIGN IN</a></li>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ACCOUNT
+              </a>
+              <ul class="dropdown-menu text-center">
+                <li><a class="dropdown-item" href="sign-up.html">SIGN UP</a></li>
+                <li><a class="dropdown-item" href="sign.in.html">SIGN IN</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- progress bar -->
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-    </div>
-</header>
-
-
+  </header>
 <main>
 
   <div class="container py-5">
@@ -237,7 +195,7 @@ a{
     <div class="container">
       <div class="row">
         <div class="col-lg-6 py-4">
-          <div class="d-flex flex-column fade-element">
+          <div class="d-flex flex-column">
             <div class="mb-3">
               <h4 class="fs-4"><i class="bi bi-check-circle fs-5 px-2"></i>Financial Awareness</h4> 
               <p>Understand where the money is being spent and get a hold of your spending patterns</p>
@@ -260,7 +218,7 @@ a{
             </div>
           </div>
         </div>
-        <div class="col-lg-6 text-center fade-element">
+        <div class="col-lg-6 text-center ">
           <img src="Images/what" alt="" style="max-height: 500px; width: 100%;" class="rounded-3 img-fluid">
         </div>
       </div>
@@ -340,95 +298,6 @@ a{
           <h5 class="px-2">Insightful Financial Analytics</h5>
         </div>
       <p>Spending patterns can be tracke through graphs</p>
-      </div>
-      <div class="col-lg-6 d-flex justify-content-center align-items-center" >
-        <!-- / A set of walkthrough screens in HTML/CSS/JS. A personal experiment with layering images, CSS3 transitions, & flexbox. -->
-      <!-- <button class='open-walkthrough'>Start</button> -->
-      <div class='walkthrough show reveal rounded-3'>
-        <div class='walkthrough-pagination'>
-        <a class='dot active'></a>
-        <a class='dot'></a>
-        <a class='dot'></a>
-        <a class='dot'></a>
-        <a class='dot'></a>
-        </div>
-        <div class='walkthrough-body'>
-        <ul class='screens animate'>
-          <li class='screen active'>
-          <div class='media logo'>
-            <img class='logo' src='https://s3.amazonaws.com/jebbles-codepen/icon.png'>
-          </div>
-          <h3>
-              
-            Intuitive Interface
-      
-          </h3>
-          <p>
-            An intuitive interface is user-friendly and easy to understand, requiring minimal instruction or prior knowledge to navigate effectively.</p>
-          </li>
-          <li class='screen'>
-          <div class='media books'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/book_icon_1.png'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/book_icon_2.png'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/book_icon_3.png'>
-          </div>
-          <h3>
-            Comprehensive Expense Tracking
-
-          </h3>
-          <p>Comprehensive expense tracking: Monitor all spending meticulously for a clear financial overview.</p>
-          </li>
-          <li class='screen'>
-          <div class='media bars'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/bar_icon_axis.png'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/bar_icon_3.png'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/bar_icon_2.png'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/bar_icon_1.png'>
-          </div>
-          <h3>
-            Insightful Financial Analytics
-
-          </h3>
-          <p>Insightful financial analytics: Delve deep into financial data for valuable insights and strategic decision-making.</p>
-          </li>
-          <li class='screen'>
-          <div class='media files'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_1.png'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_2.png'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_3.png'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_4.png'>
-          </div>
-          <h3>
-            Data analysis
-
-          </h3>
-          <p>Analyze spending patterns, trends, and insights through customizable reports and visualizations to make informed financial decisions.</p>
-          </li>
-          <li class='screen'>
-          <div class='media comm'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/comm_icon_1.png'>
-            <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/comm_icon_2.png'>
-          </div>
-          <h3>
-            Security features
-
-          </h3>
-          <p>Implement robust security measures such as encryption, authentication, and backup options to protect sensitive financial data.</p>
-          </li>
-        </ul>
-        <button class='prev-screen'>
-          <i class='icon-angle-left'></i>
-        </button>
-        <button class='next-screen'>
-          <i class='icon-angle-right'></i>
-        </button>
-        </div>
-        <div class='walkthrough-footer'>
-        <!-- <button class='button next-screen'>Next</button> -->
-        <!-- <button class='button finish close' disabled='true'>Finish</button> -->
-      
-        </div>
-      </div>
       </div>
         </div>
         </div>
@@ -615,7 +484,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 
-<!-- blue box  -->
 
 
 </body>
